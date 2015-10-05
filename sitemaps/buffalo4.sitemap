@@ -1,0 +1,9 @@
+sitemap demo label="Buffalo 4"
+{
+Frame label="Zones" {
+	Text item=zone_0
+	Text item=zone_1
+	Text item=zone_2
+	Text item=zone_3
+}
+}

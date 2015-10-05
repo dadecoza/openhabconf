@@ -1,0 +1,9 @@
+Group All
+Group gGF (All)
+
+Group GF_Buffalo4 "Buffalo 4" <video> (gGF)
+
+Switch zone_0 "Alarm [%s]" <switch> {mqtt="<[home:/dade/alarm/0:state:MAP(armed.map)]"}
+String zone_1 "Sitkamer [%s]" <sofa> {mqtt="<[home:/dade/alarm/1:state:MAP(zone.map)]"}
+String zone_2 "Trappe [%s]" <attic> {mqtt="<[home:/dade/alarm/2:state:MAP(zone.map)]"}
+Contact zone_3 "Voordeur [%s]" <door> {mqtt="<[home:/dade/alarm/3:state:MAP(contact.map)]"}
