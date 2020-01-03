@@ -1,9 +1,13 @@
-Group All
-Group gGF (All)
+Contact zone_4 "Alarm [MAP(armed.map):%s]" <switch>
+Contact zone_3 "Sitkamer [MAP(movement.map):%s]" <sofa>
+Contact zone_2 "Trappe [MAP(movement.map):%s]" <attic>
+Contact zone_1 "Voordeur [MAP(doors.map):%s]" <door>
+Contact zone_0 "Agterdeur [MAP(doors.map):%s]" <door>
 
-Group GF_Buffalo4 "Buffalo 4" <video> (gGF)
+DateTime zone_4_update "Alarm [%1$ta %1$tR]" <switch>
+DateTime zone_3_update "Sitkamer [%1$ta %1$tR]" <sofa>
+DateTime zone_2_update "Trappe [%1$ta %1$tR]" <attic>
+DateTime zone_1_update "Voordeur [%1$ta %1$tR]" <door>
+DateTime zone_0_update "Agterdeur [%1$ta %1$tR]" <door>
 
-Switch zone_0 "Alarm [%s]" <switch> {mqtt="<[home:/dade/alarm/0:state:MAP(armed.map)]"}
-String zone_1 "Sitkamer [%s]" <sofa> {mqtt="<[home:/dade/alarm/1:state:MAP(zone.map)]"}
-String zone_2 "Trappe [%s]" <attic> {mqtt="<[home:/dade/alarm/2:state:MAP(zone.map)]"}
-Contact zone_3 "Voordeur [%s]" <door> {mqtt="<[home:/dade/alarm/3:state:MAP(contact.map)]"}
+Number alarm_state

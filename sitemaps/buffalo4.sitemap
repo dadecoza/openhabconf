@@ -1,9 +1,20 @@
-sitemap demo label="Buffalo 4"
+sitemap buffalo4 label="Buffalo 4"
 {
-Frame label="Zones" {
-	Text item=zone_0
-	Text item=zone_1
-	Text item=zone_2
+Frame label="Status" {
+	Text item=zone_4
 	Text item=zone_3
+	Text item=zone_2
+	Text item=zone_1
+        Text item=zone_0
+}
+Frame label="Updated" {
+        Text item=zone_4_update
+        Text item=zone_3_update
+        Text item=zone_2_update
+        Text item=zone_1_update
+        Text item=zone_0_update
+}
+Frame label="Kamera" {
+        Image url="http://192.168.3.34:8081"
 }
 }

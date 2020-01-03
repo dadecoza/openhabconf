@@ -1,0 +1,12 @@
+rule "alarm state changed"
+when
+     Item alarm_state changed
+then
+     var tmp = alarm_state.state as DecimalType
+     var state = tmp.toBigDecimal.toBigInteger
+     postUpdate(zone_0, (if(state.testBit(0)) "CLOSED" else "OPEN"))
+     postUpdate(zone_1, (if(state.testBit(1)) "CLOSED" else "OPEN"))
+     postUpdate(zone_2, (if(state.testBit(2)) "CLOSED" else "OPEN"))
+     postUpdate(zone_3, (if(state.testBit(3)) "CLOSED" else "OPEN"))
+     postUpdate(zone_4, (if(state.testBit(4)) "CLOSED" else "OPEN"))
+end

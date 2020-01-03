@@ -1,0 +1,34 @@
+rule "zone0 changed"
+when
+     Item zone_0 changed
+then
+    postUpdate(zone_0_update, new DateTimeType())
+end
+
+rule "zone1 changed"
+when
+     Item zone_1 changed
+then
+    postUpdate(zone_1_update, new DateTimeType())
+end
+
+rule "zone2 changed"
+when
+     Item zone_2 changed
+then
+    postUpdate(zone_2_update, new DateTimeType())
+end
+
+rule "zone3 changed"
+when
+     Item zone_3 changed
+then
+    postUpdate(zone_3_update, new DateTimeType())
+end
+
+rule "zone4 changed"
+when
+     Item zone_4 changed
+then
+    postUpdate(zone_4_update, new DateTimeType())
+end
